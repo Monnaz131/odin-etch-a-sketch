@@ -1,16 +1,20 @@
-const color = document.getElementById('color');
-const rainbow = document.getElementById('rainbow');
-const clear = document.getElementById('clear');
-const changeSize = document.getElementById('change-size');
-const sketchPad = document.getElementById('pad');
+function createGrid(size) {
+    let sketchPad = document.getElementById('pad');
+    sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    sketchPad.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-function createGrid(rows, cols) {
-    sketchPad.style.setProperty('--grid-rows', rows);
-    sketchPad.style.setProperty('--grid-cols', cols);
-    for (let i = 0; i < (rows * cols); i++) {
+    for (let i = 0; i < (size * size); i++) {
         let cell = document.createElement("div");
-        sketchPad.appendChild(cell).className = "grid-item";
+        sketchPad.insertAdjacentElement('beforeend', cell);
     };
 };
 
-createGrid(16, 16);
+createGrid(16);
+
+function changeSize(inputValue) {
+    if (inputValue >= 2 && inputValue <= 100) {
+        createGrid(inputValue);
+    } else {
+        alert("Only sizes 2-100 are available");
+    }
+}
