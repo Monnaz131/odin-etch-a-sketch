@@ -23,16 +23,6 @@ p {
     align-items: center;
 }
 
-.color-pickers {
-    display: flex;
-    flex-direction: column;
-}
-
-.color-picker-pen,
-.color-picker-background {
-    display: flex;
-}
-
 .controls,
 .buttons {
     display: flex;
@@ -49,4 +39,6 @@ p {
 .footer {
     text-align: center;
     background-color: rgb(75, 77, 77);
+    margin: 0;
+    padding: 15px;
 }

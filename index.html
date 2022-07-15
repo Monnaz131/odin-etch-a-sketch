@@ -11,23 +11,17 @@
     <div class="main">
         <div class="header">
             <h1>Etch-A-Sketch</h1>
-            <p>Choose your color and hover over the sketch-pad to create 
+            <p>Choose your grid size and color, then hover over the sketch-pad to create 
                 your masterpiece</p>
         </div>
         <div id="container" class="container">
             <div id="controls" class="controls"> 
-                <div class="color-pickers">
-                    <input type="color" id="color-picker-pen" class="color-picker">Pen Color</input>
-                    <input type="color" id="color-picker-background" class="color-picker-background">Background Color</input>
-                </div>
                 <div id="buttons" class="buttons">
-                    <button id="color" class="color">Color</button>
-                    <button id="rainbow" class="rainbow">Rainbow</button>
-                    <button id="background" class="background" onclick="changeBackgroundColor()">Background</button>
-                    <button id="eraser" class="eraser">Eraser</button>
-                    <button id="clear" class="clear">Clear</button>
+                    <button id="change-size">Change grid size</button>
+                    <button id="color">Color</button>
+                    <button id="rainbow">Rainbow</button>
+                    <button id="clear">Clear</button>
                 </div>
-                <div id="grid-size" class="grid-size">Grid</div>
             </div>
             <div id="pad" class="pad">Pad</div>
         </div>
