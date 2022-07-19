@@ -43,6 +43,38 @@ button {
     border-radius: 10px;
 }
 
+#size-changer {
+    padding: 10px;
+    text-align: center;
+    border: 5px solid blueviolet;
+}
+
+#color-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#color-picker {
+    appearance: none;
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+#color-picker::-webkit-color-swatch {
+    border-radius: 15px;
+    border: none;
+}
+
+label {
+    color: white;
+}
+
 button:hover {
     background-color: blueviolet;
 }
@@ -55,6 +87,7 @@ button:hover {
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     margin: 30px;
+    box-shadow: 10px 10px blueviolet;
 }
 
 .footer {

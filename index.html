@@ -14,23 +14,29 @@
             <p>Choose your grid size and color, then hover over the sketch-pad to create 
                 your masterpiece</p>
         </div>
-        <div id="container" class="container">
+        <section id="container" class="container">
             <div id="controls" class="controls"> 
                 <div id="buttons" class="buttons">
                     <input 
+                        id="size-changer"
                         type="text" 
                         placeholder="Size of board" 
                         value="16" 
                         onchange="changeSize(this.value)" 
                     />
                     <button id="accept-size">Change grid size</button>
-                    <button id="color">Color</button>
-                    <button id="rainbow">Rainbow</button>
-                    <button id="clear">Clear</button>
+                    <div id="color-container">
+                        <input id="color-picker" type="color" />
+                        <label for="color-picker">Pen Color</label>
+                    </div>
+                    <button id="color" onclick="changeColor('color')">Color</button>
+                    <button id="eraser" onclick="changeColor('white')">Eraser</button>
+                    <button id="rainbow" onclick="changeColor('rainbow')">Rainbow</button>
+                    <button id="clear" onclick="clearPad()">Clear</button>
                 </div>
             </div>
             <div id="pad" class="pad"></div>
-        </div>
+        </section>
         <div class="footer">
             <h3>Made by Monnaz &#129323</h3>
         </div>
